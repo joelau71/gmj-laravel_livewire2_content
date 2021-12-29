@@ -1,0 +1,26 @@
+{
+    "name": "gmj/laravel_livewire2_content",
+    "description": "need tailwindcss support / gsap js",
+    "type": "library",
+    "license": "MIT",
+     "authors": [
+        {
+            "name": "Joe Lau",
+            "email": "joe.laucw71@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GMJ\\LaravelLivewire2Content\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GMJ\\LaravelLivewire2Content\\LaravelLivewire2ContentServiceProvider"
+            ]
+        }
+    }
+}
