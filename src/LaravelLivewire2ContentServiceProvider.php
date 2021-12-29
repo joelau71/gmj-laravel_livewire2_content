@@ -17,7 +17,7 @@ class LaravelLivewire2ContentServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'LaravelLivewire2Content');
 
         Blade::component('LaravelLivewire2Content', Frontend::class);
-        Livewire::component("GMJ.LaravelLivewire2Content.Http.Livewire.Backend", Backend::class);
+        Livewire::component("LaravelLivewire2ContentLivewire", Backend::class);
 
         $this->publishes([
             __DIR__ . '/resources/assets' => public_path('gmj'),
