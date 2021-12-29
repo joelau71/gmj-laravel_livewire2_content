@@ -20,7 +20,6 @@ class LaravelLivewire2ContentServiceProvider extends ServiceProvider
         Livewire::component("LaravelLivewire2ContentLivewire", Backend::class);
 
         $this->publishes([
-            __DIR__ . '/resources/assets' => public_path('gmj'),
             __DIR__ . '/database/seeders' => database_path('seeders'),
         ], 'GMJ\LaravelLivewire2Content');
     }
