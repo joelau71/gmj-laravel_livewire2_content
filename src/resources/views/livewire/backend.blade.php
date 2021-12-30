@@ -7,13 +7,13 @@
         ['name' => $mode]
     ];
     @endphp
-    <x-admin.widget.breadcrumb :breadcrumbs="$breadcrumbs" />
+    <x-admin.atoms.breadcrumb :breadcrumbs="$breadcrumbs" />
 
     <div class="relative mt-4">
         <x-admin.atoms.required />
 
         <div class="mt-2" wire:ignore>
-            <x-admin.widget.select id="style" class="w-full appearance-none rounded-lg border-gray-300">
+            <x-admin.atoms.select id="style" class="w-full appearance-none rounded-lg border-gray-300">
                 <option
                     value="1"
                     @if ($collection->style == "1") selected @endif
@@ -44,34 +44,34 @@
                 >
                     Gallery 5 photo
                 </option>
-            </x-admin.widget.select>
+            </x-admin.atoms.select>
         </div>
 
         <div>
             @foreach (config('translatable.locales') as $locale)
-                <x-admin.widget.row>
+                <x-admin.atoms.row>
                     <div>
-                        <x-admin.widget.label class="required mb-2">
+                        <x-admin.atoms.label class="required mb-2">
                             Content({{ $locale }})
-                        </x-admin.widget.label>
+                        </x-admin.atoms.label>
                         <div class="tinymce bg-white" data-lang="{{$locale}}" id="content_{{$locale}}">
                             {!! $collection->getTranslation("content", $locale) !!}
                         </div>
                     </div>
-                </x-admin.widget.row>
+                </x-admin.atoms.row>
             @endforeach
         </div>
         
         <hr class="my-10">
 
-        <x-admin.widget.button-group>
-            <x-admin.widget.link href="{{ url()->previous() }}">
+        <div class="text-right">
+            <x-admin.atoms.link href="{{ url()->previous() }}">
                 Back
-            </x-admin.widget.link>
-            <x-admin.widget.button id="save">
+            </x-admin.atoms.link>
+            <x-admin.atoms.button id="save">
                 Save
-            </x-admin.widget.button>
-        </x-admin.widget.button-group>
+            </x-admin.atoms.button>
+        </div>
     </div>
 </div>
 
