@@ -74,7 +74,7 @@ HTML;
     static public function sample3()
     {
         return <<<HTML
-            <div class="laravel_livewire2_content content_two_column flex flex-wrap items-center -mx-8">
+            <div class="laravel_livewire2_content content_two_column flex flex-wrap items-center -mx-8 lg:-mx-5">
                 <div class="w-full lg:w-6/12 content_left">
                     <div class="px-8 lg:px-5 h-full w-full">
                         <div class="overflow-hidden image-wrapper">
@@ -101,7 +101,7 @@ HTML;
     static public function sample4()
     {
         return <<<HTML
-            <div class="laravel_livewire2_content content_two_column flex flex-wrap items-center -mx-8">
+            <div class="laravel_livewire2_content content_two_column flex flex-wrap items-center -mx-8 lg:-mx-5">
                 <div class="w-full lg:w-6/12">
                     <div class="px-8 pt-6 lg:pt-0 lg:px-5">
                         <div class="main-element-title">Title</div>
